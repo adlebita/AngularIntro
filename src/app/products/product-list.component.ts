@@ -21,7 +21,8 @@ export class ProductListComponent {
       "description": "Choo choo",
       "price": 32.99,
       "starRating": 4.2,
-      "imageUrl": "assets/images/garden_cart.png"
+      "imageUrl": "assets/images/garden_cart.png",
+      "stock": 5
     },
     {
       "productId": 5,
@@ -31,7 +32,8 @@ export class ProductListComponent {
       "description": "Bang bang",
       "price": 12.99,
       "starRating": 4.8,
-      "imageUrl": "assets/images/hammer.png"
+      "imageUrl": "assets/images/hammer.png",
+      "stock": 5
     },
   ]
 
