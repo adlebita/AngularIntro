@@ -1,4 +1,6 @@
-# Apm
+# AngularIntro
+
+Pluralsight Tutorial - Angular: Getting Started Deborah Kurata
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
 
