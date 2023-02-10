@@ -1,4 +1,4 @@
-﻿import {Component} from "@angular/core";
+﻿import {Component, OnInit} from "@angular/core";
 import {IProduct} from "./Interfaces/IProduct";
 
 @Component({
@@ -7,7 +7,7 @@ import {IProduct} from "./Interfaces/IProduct";
   styleUrls: ['./product-list.component.css']
 })
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
   pageTitle: string = "Product List"
   imageWidth: number = 50;
   imageMargin: number = 2;
@@ -41,5 +41,12 @@ export class ProductListComponent {
 
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  ngOnInit(): void {
+    // Place to put **initialization logic** for a component.
+    // The constructor is best used to initialise component's members/properties.
+    // In terms of loading order:
+    // Component is created, calls constructor -> component added to the DOM -> ngOnInit is then called.
   }
 }
