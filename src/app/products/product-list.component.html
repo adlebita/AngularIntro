@@ -6,12 +6,12 @@
     <div class="row">
       <div class="col-md-2">Filter by:</div>
       <div class="col-md-4">
-        <input type="text" [(ngModel)]='itemFilter'/>
+        <input type="text" [(ngModel)]='productFilter'/>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6">
-        <h4>Filtered by: {{itemFilter}}</h4>
+        <h4>Filtered by: {{productFilter}}</h4>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let product of products">
+    <tr *ngFor="let product of filteredProducts">
       <td>
           <img [src]='product.imageUrl'
                [title]='product.productName'
@@ -42,7 +42,7 @@
           />
       </td> <!--When aligning data with table headers, you can put placeholders like this here to ensure data is displayed correctly-->
       <td>{{product.productName | uppercase}}</td>
-      <td>{{product.productCode}}</td>
+      <td>{{product.productCode | convertToSpaces:'-'}}</td>
       <td>{{product.stock}}</td>
       <td>{{product.price | currency:"NZD"}}</td>
       <td>{{product.starRating}}</td>
