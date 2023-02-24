@@ -75,4 +75,9 @@ export class ProductListComponent implements OnInit, OnDestroy{
     // The component is still part of the DOM when this lifecycle hook is invoked. The component is removed from the
     // DOM after completion of this method.
   }
+
+  onRatingClicked($event: string) {
+    console.log($event + ">.<");
+    this.pageTitle = $event;
+  }
 }
